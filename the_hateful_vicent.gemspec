@@ -5,7 +5,7 @@ require "the_hateful_vicent/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "the_hateful_vicent"
-  spec.version       = TheHatefulVicent::VERSION::STRING
+  spec.version       = TheHatefulVicent::Version::STRING
   spec.authors       = ["Lucas Fernandes"]
   spec.email         = ["lsfernandes92@gmail.com"]
 
