@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency 'calabash-cucumber', '~> 0.20.5'
+  spec.add_development_dependency "rspec"
 end
