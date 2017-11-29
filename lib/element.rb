@@ -1,16 +1,14 @@
 #!/bin/env ruby
 # encoding: utf-8
 
-# author: Rodolpho Ferreira Rodrigues
-
-module PageObjectModel
+module TheHatefulVicent
   module CalabashProxy
     require 'calabash-cucumber/operations'
     include Calabash::Cucumber::Operations
   end
 end
 
-module PageObjectModel
+module TheHatefulVicent
   class Element
     attr_reader :selector
 
@@ -25,7 +23,7 @@ module PageObjectModel
     def set_date(date)
       self.await_to_show_up
       self.touch
-      calendar = PageObjectModel::DatePicker.new
+      calendar = TheHatefulVicent::DatePicker.new
       calendar.set_date date
       calendar.touch_ok_button
     end
@@ -176,11 +174,11 @@ module PageObjectModel
     private
 
     def calabash_proxy
-      @calabash_proxy ||= Class.new.extend(PageObjectModel::CalabashProxy)
+      @calabash_proxy ||= Class.new.extend(TheHatefulVicent::CalabashProxy)
     end
 
     def page_actions
-      @page_actions ||= Class.new.extend(PageObjectModel::CalabashProxy).extend(PageObjectModel::PageActions)
+      @page_actions ||= Class.new.extend(TheHatefulVicent::CalabashProxy).extend(TheHatefulVicent::PageActions)
     end
 
     def query(opts = {})
@@ -193,8 +191,8 @@ module PageObjectModel
   end
 end
 
-module PageObjectModel
-  class DatePicker < PageObjectModel::Element
+module TheHatefulVicent
+  class DatePicker < TheHatefulVicent::Element
     extend ElementContainer
 
     attr_reader :date

@@ -1,7 +1,7 @@
 #!/bin/env ruby
 # encoding: utf-8
 
-module PageObjectModel
+module TheHatefulVicent
   module CommonAsserts
     def expect_page(page, timeout = 15)
       name = page.respond_to?(:name) ? page.name : page.class.name
@@ -34,5 +34,3 @@ module PageObjectModel
     alias_method :expect_section, :expect_page
   end
 end
-
-World(PageObjectModel::CommonAsserts)

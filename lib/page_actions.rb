@@ -1,9 +1,7 @@
 #!/bin/env ruby
 # encoding: utf-8
 
-# author: Rodolpho Ferreira Rodrigues
-
-module PageObjectModel
+module TheHatefulVicent
   module PageActions
 
     def to_center(element)
@@ -75,7 +73,7 @@ module PageObjectModel
       end
 
       element = opts[:raise_if_not_found]
-      raise PageObjectModel::Exceptions::ElementNotFoundError,
+      raise TheHatefulVicent::Exceptions::ElementNotFoundError,
         "Não foi encontrado elemento com a query: #{element}" if element
     end
 
@@ -108,5 +106,3 @@ module PageObjectModel
     end
   end
 end
-
-World(PageObjectModel::PageActions)

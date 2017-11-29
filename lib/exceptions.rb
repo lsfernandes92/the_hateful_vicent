@@ -1,8 +1,6 @@
-module PageObjectModel
+module TheHatefulVicent
   module Exceptions
     class ElementNotFoundError < RuntimeError
     end
   end
 end
-
-World(PageObjectModel::Exceptions)

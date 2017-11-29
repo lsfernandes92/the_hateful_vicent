@@ -1,9 +1,7 @@
 #!/bin/env ruby
 # encoding: utf-8
 
-# author: Rodolpho Ferreira Rodrigues
-
-module PageObjectModel
+module TheHatefulVicent
   require 'calabash-cucumber/ibase'
   class Page < Calabash::IBase
     extend ElementContainer
